@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+<body style="border:1px solid red">
+  <div class="avatar"><img src="./images/avatar.png" alt="avatar"></div>
+  <div class="content">
+    <div class="list">
+      <div>0.00</div>
+      <div>钱包（元）</div>
+    </div>
+    <div class="list">
+      <div>0.00</div>
+      <div>奖金（元）</div>
+    </div>
+    <div class="list">
+      <div>0.00</div>
+      <div>积分（个）</div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="form-group" style="margin-top:58px">
+    <div class="b-group b-group-android">
+      <button class="btn-android">       下载Android版</button>
+    </div>
+    <div class="b-group-disabled">
+      <button class="btn-ios" id="test">      下载IOS版</button>
+    </div>
+  </div>
+</body>
+</html>
+<link rel="stylesheet" href="./js/jDialog/jDialog.css" type="text/css">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/jDialog.js"></script>
+<script type="text/javascript">
+$("#test").click(function(){
+  var dialog = jDialog.alert('暂无开放,敬请期待!',{},{
+    showShadow: false,// 不显示对话框阴影
+    buttonAlign : 'center',
+    width:'220px',
+    height:'70px',
+    textAlign:'center',
+    top:'200px',
+    left:'17%',
+    events : {
+      show : function(evt){
+        var dlg = evt.data.dialog;
+      },
+      close : function(evt){
+        var dlg = evt.data.dialog;
+      },
+      enterKey : function(evt){
+        alert('enter key pressed!');
+      },
+      escKey : function(evt){
+        alert('esc key pressed!');
+        evt.data.dialog.close();
+      }
+    }
+  });
+}) ;
+</script>

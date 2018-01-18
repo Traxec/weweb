@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+/*----------------变量配置------------------*/
+$test-border: 0px solid red;
+$border-color: #cdcdcd;
+// $font-size-b:
+
+/*----------------变量配置结束--------------*/
+
+/*----------------混合器配置----------------*/
+
+//标题的样式
+@mixin title {
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  // font-size: 16px;
+  color: #000;
+  text-align: center;
+  border: $test-border;
+  border-bottom: 1px solid $border-color;
+}
+
+//表单样式
+@mixin form-group{
+  height: auto;
+  padding: 17px 0px 17px 20px;
+  border: $test-border;
+  font-size: 12px;
+
+  label{
+    color:#000;
+    // font-size: 12px;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    width: 49px;
+    border: $test-border;
+  }
+}
+
+.group{
+    margin-left: 10px;
+    width: 263px;
+    height: 30px;
+    border: $test-border;
+    float: left;
+}
+
+@mixin t-group{
+  @extend .group;
+
+  input{
+    border: 0px;
+    width: 100%;
+    height: 94%;
+    outline:none;
+  }
+}
+
+@mixin s-group{
+  @extend .group;
+
+  input{
+    float: left;
+    border: 0px;
+    width: 137px;
+    height: 94%;
+    outline:none;
+  }
+
+  button{
+    float: left;
+    margin-left: 6px;
+    width: 120px;
+    height: 30px;
+    border: 1px solid $border-color;
+    background-color: #fff;
+    line-height: 28px;
+    border-radius: 2px;
+  }
+}
+
+@mixin b-group($btn-margin-top:17px,$btn-color:#518ae0){
+  width: auto;
+  margin-top: $btn-margin-top;
+
+  // margin: 21px 19px 10px 22px;
+  span{
+    margin-bottom: 7px;
+    color: #999;
+  }
+
+  button{
+    width: 319px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: $btn-color;
+    color: #fff;
+    border: 0px;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+  }
+
+  .btn-android{
+    background-image: url(../images/an.png);
+    background-position: 30%;
+  }
+  .btn-ios{
+    background-image: url(../images/ios.png);
+    background-position: 35%;
+  }
+}
+
+//大图样式
+@mixin big-logo{
+  width: 360px;
+  height: 150px;
+  margin-top: 80px;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// 头像
+@mixin avatar(){
+  width: 60px;
+  height: 60px;
+  margin: 60px auto 42px auto;
+  border:$test-border;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// 信息栏
+@mixin list($border-right:1px){
+  width: 119px;
+  height: 40px;
+  float: left;
+  text-align: center;
+  border-right:$border-right solid $border-color;
+
+  >div:first-child{
+    // width: 24px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color:#000;
+    border:$test-border;
+  }
+  >div:last-child{
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    color:#999;
+    border:$test-border;
+  }
+}
+
+/*----------------混合器配置结束------------*/
+
+/*----------------全局标签配置--------------*/
+body{
+  width: 360px;
+  height: 640px;
+  padding-bottom: 100px;
+  margin: 0px;
+}
+
+hr{
+  border: 0px;
+  border-bottom:1px solid #bbb;
+  margin-left: 10px;
+}
+/*----------------全局标签配置结束----------*/
+
+.clearfix{
+  clear: both;
+}
+
+.title{
+  @include title;
+}
+
+.content{
+  margin-top: 10px;
+}
+
+.form-group{
+  @include form-group;
+}
+
+.t-group{
+  @include t-group;
+}
+.s-group{
+  @include s-group;
+}
+.b-group{
+  @include b-group;
+}
+.b-group-hasword{
+  @include b-group($btn-margin-top:0px);
+}
+.b-group-disabled{
+  @include b-group($btn-color:#999);
+}
+.big-logo{
+  @include big-logo;
+}
+.avatar{
+  @include avatar;
+}
+.list{
+  @include list;
+}
+.list-noborder{
+  @include list;
+}
