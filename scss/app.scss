@@ -19,14 +19,17 @@ $border-color: #cdcdcd;
   text-align: center;
   border: $test-border;
   border-bottom: 1px solid $border-color;
+  background: #fff;
+  box-shadow:0 1px #cccccc;
 }
 
 //表单样式
-@mixin form-group{
+@mixin form-group($bgcolor:#fff){
   height: auto;
-  padding: 17px 0px 17px 20px;
+  padding: 15px 0px 15px 20px;
   border: $test-border;
   font-size: 12px;
+  background: $bgcolor;
 
   label{
     color:#000;
@@ -41,6 +44,7 @@ $border-color: #cdcdcd;
 
 .group{
     margin-left: 10px;
+    margin-right: 10px;
     width: 263px;
     height: 30px;
     border: $test-border;
@@ -171,11 +175,14 @@ body{
   height: 640px;
   padding-bottom: 100px;
   margin: 0px;
+  background: #F2F2F2;
 }
 
 hr{
   border: 0px;
   border-bottom:1px solid #bbb;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: 10px;
 }
 /*----------------全局标签配置结束----------*/
@@ -194,6 +201,9 @@ hr{
 
 .form-group{
   @include form-group;
+}
+.form-group-bgcolor-f2f2f2{
+  @include form-group($bgcolor:#f2f2f2);
 }
 
 .t-group{

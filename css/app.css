@@ -4,6 +4,7 @@
 /*----------------混合器配置----------------*/
 .group, .t-group, .s-group {
   margin-left: 10px;
+  margin-right: 10px;
   width: 263px;
   height: 30px;
   border: 0px solid red;
@@ -15,11 +16,14 @@ body {
   width: 360px;
   height: 640px;
   padding-bottom: 100px;
-  margin: 0px; }
+  margin: 0px;
+  background: #F2F2F2; }
 
 hr {
   border: 0px;
   border-bottom: 1px solid #bbb;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: 10px; }
 
 /*----------------全局标签配置结束----------*/
@@ -33,17 +37,34 @@ hr {
   color: #000;
   text-align: center;
   border: 0px solid red;
-  border-bottom: 1px solid #cdcdcd; }
+  border-bottom: 1px solid #cdcdcd;
+  background: #fff;
+  box-shadow: 0 1px #cccccc; }
 
 .content {
   margin-top: 10px; }
 
 .form-group {
   height: auto;
-  padding: 17px 0px 17px 20px;
+  padding: 15px 0px 15px 20px;
   border: 0px solid red;
-  font-size: 12px; }
+  font-size: 12px;
+  background: #fff; }
   .form-group label {
+    color: #000;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    width: 49px;
+    border: 0px solid red; }
+
+.form-group-bgcolor-f2f2f2 {
+  height: auto;
+  padding: 15px 0px 15px 20px;
+  border: 0px solid red;
+  font-size: 12px;
+  background: #f2f2f2; }
+  .form-group-bgcolor-f2f2f2 label {
     color: #000;
     float: left;
     text-align: center;
