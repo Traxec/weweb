@@ -12,6 +12,9 @@
 
 /*----------------混合器配置结束------------*/
 /*----------------全局标签配置--------------*/
+* {
+  outline: none; }
+
 body {
   width: 360px;
   height: 640px;
@@ -110,6 +113,8 @@ hr {
     border: 0px;
     border-radius: 6px;
     background-repeat: no-repeat; }
+    .b-group button:focus {
+      box-shadow: 0 2px #cccccc; }
   .b-group .btn-android {
     background-image: url(../images/an.png);
     background-position: 30%; }
@@ -133,6 +138,8 @@ hr {
     border: 0px;
     border-radius: 6px;
     background-repeat: no-repeat; }
+    .b-group-hasword button:focus {
+      box-shadow: 0 2px #cccccc; }
   .b-group-hasword .btn-android {
     background-image: url(../images/an.png);
     background-position: 30%; }
@@ -156,6 +163,8 @@ hr {
     border: 0px;
     border-radius: 6px;
     background-repeat: no-repeat; }
+    .b-group-disabled button:focus {
+      box-shadow: 0 2px #cccccc; }
   .b-group-disabled .btn-android {
     background-image: url(../images/an.png);
     background-position: 30%; }
